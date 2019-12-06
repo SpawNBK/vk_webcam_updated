@@ -208,7 +208,8 @@ export const routerReducer = (state = initialState, action) => {
                     setPanel = panelsHistoryNew[0];
                 }
             } else {
-                VK.closeApp();
+                //VK.closeApp();
+                window.history.pushState(null, null);
             }
 
             if (panelsHistory.length === 1 && action.payload.from === 'iOS') {
