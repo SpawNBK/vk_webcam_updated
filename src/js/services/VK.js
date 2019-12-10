@@ -44,6 +44,18 @@ export const swipeBackOff = () => {
     VKConnect.send("VKWebAppDisableSwipeBack", {});
 };
 
+export const getUserInfo = () => {
+    return fetchData();
+};
+
+async function fetchData() {
+    return VKConnect.send("VKWebAppGetUserInfo", {}).then(data => {
+        return data.data.response;
+    }).catch(error => {
+        return error;
+    });
+}
+
 export const groupsGet = () => {
     return APICall('groups.get', {
         "extended": "1",

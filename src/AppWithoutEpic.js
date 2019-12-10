@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux'
 import {goBack, closeModal} from "./js/store/router/actions";
@@ -13,16 +13,27 @@ import HomeBotsListModal from './js/components/modals/HomeBotsListModal';
 import HomeBotInfoModal from './js/components/modals/HomeBotInfoModal';
 
 import MorePanelExample from './js/panels/more/example';
+import "./js/my.js";
+
+
 
 class App extends React.Component {
+    state = {
+        fetchedUser: null,
+        setUser: null
+    };
+
     constructor(props) {
         super(props);
-
         this.lastAndroidBackAction = 0;
     }
 
+
     componentWillMount() {
         const {goBack, dispatch} = this.props;
+
+        const user = VK.getUserInfo();
+        this.setState({ setUser: user });
 
         dispatch(VK.initApp());
 
@@ -42,6 +53,9 @@ class App extends React.Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         const {activeView, activeStory, activePanel, scrollPosition} = this.props;
 
+        const user = VK.getUserInfo();
+        this.setState({ setUser: user });
+
         if (
             prevProps.activeView !== activeView ||
             prevProps.activePanel !== activePanel ||
@@ -59,6 +73,8 @@ class App extends React.Component {
         let history = (panelsHistory[activeView] === undefined) ? [activeView] : panelsHistory[activeView];
         let popout = (popouts[activeView] === undefined) ? null : popouts[activeView];
         let activeModal = (activeModals[activeView] === undefined) ? null : activeModals[activeView];
+
+
 
         const homeModals = (
             <ModalRoot activeModal={activeModal}>
@@ -83,7 +99,7 @@ class App extends React.Component {
                         history={history}
                         onSwipeBack={() => goBack()}
                     >
-                        <HomePanelProfile id="base" withoutEpic={true}/>
+                        <HomePanelProfile id="base" withoutEpic={true} fetchedUser={this.state.fetchedUser} setUser={this.state.setUser}/>
                         <HomePanelGroups id="groups"/>
                     </View>
                     <View
