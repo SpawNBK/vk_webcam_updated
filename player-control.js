@@ -40,7 +40,7 @@ function PlayerjsAsync(CamName, ip, prevIP, title){
         case 'cam1':
             cam1 = new Playerjs({id:CamName,
                 file:ip,
-                title:title,
+                title: "play",
                 poster: prevIP
             });
             break;
@@ -48,28 +48,28 @@ function PlayerjsAsync(CamName, ip, prevIP, title){
         case 'cam2':
             cam2 = new Playerjs({id:CamName,
                 file:ip,
-                title:title,
+                title: "play",
                 poster: prevIP
             });
             break;
         case 'cam3':
             cam3 = new Playerjs({id:CamName,
                 file:ip,
-                title:title,
+                title: "play",
                 poster: prevIP
             });
             break;
         case 'cam4':
             cam4 = new Playerjs({id:CamName,
                 file:ip,
-                title:title,
+                title: "play",
                 poster: prevIP
             });
             break;
         case 'cam5':
             cam5 = new Playerjs({id:CamName,
                 file:ip,
-                title:title,
+                title: "play",
                 poster: prevIP
             });
             break;
