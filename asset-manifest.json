@@ -1,5 +1,5 @@
 {
-  "main.css": "/vk_webcam_updated/static/css/main.3a2c577d.chunk.css",
+  "main.css": "/vk_webcam_updated/static/css/main.e12f32d9.chunk.css",
   "main.js": "/vk_webcam_updated/static/js/main.3c993cdd.chunk.js",
   "main.js.map": "/vk_webcam_updated/static/js/main.3c993cdd.chunk.js.map",
   "runtime~main.js": "/vk_webcam_updated/static/js/runtime~main.ee0b29f1.js",
@@ -8,8 +8,8 @@
   "static/js/2.ea335950.chunk.js": "/vk_webcam_updated/static/js/2.ea335950.chunk.js",
   "static/js/2.ea335950.chunk.js.map": "/vk_webcam_updated/static/js/2.ea335950.chunk.js.map",
   "index.html": "/vk_webcam_updated/index.html",
-  "precache-manifest.e0a66d00001c99cc63cc85ee8bf33fe0.js": "/vk_webcam_updated/precache-manifest.e0a66d00001c99cc63cc85ee8bf33fe0.js",
+  "precache-manifest.a8c9d4e16b99087d13140a786db14dc8.js": "/vk_webcam_updated/precache-manifest.a8c9d4e16b99087d13140a786db14dc8.js",
   "service-worker.js": "/vk_webcam_updated/service-worker.js",
   "static/css/2.dd2e62d3.chunk.css.map": "/vk_webcam_updated/static/css/2.dd2e62d3.chunk.css.map",
-  "static/css/main.3a2c577d.chunk.css.map": "/vk_webcam_updated/static/css/main.3a2c577d.chunk.css.map"
+  "static/css/main.e12f32d9.chunk.css.map": "/vk_webcam_updated/static/css/main.e12f32d9.chunk.css.map"
 }
