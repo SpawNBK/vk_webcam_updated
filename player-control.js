@@ -1,3 +1,14 @@
+document.addEventListener('DOMContentLoaded', function(){
+    Element.prototype.remove = function() {
+        this.parentElement.removeChild(this);
+    };
+    NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+        for(var i = this.length - 1; i >= 0; i--) {
+            if(this[i] && this[i].parentElement) {
+                this[i].parentElement.removeChild(this[i]);
+            }
+        }
+    };
 
 var cams = { "cam1":
              {
@@ -72,6 +83,8 @@ function PlayerjsAsync(CamName, ip, prevIP, title){
                 title: "",
                 poster: prevIP
             });
+            document.getElementsByClassName("loading").remove();
+            document.getElementById("main").style.display='block';
             break;
 
     }
@@ -113,19 +126,5 @@ function PlayerjsEvents(event,id,info){
     }
 }
 
-document.addEventListener('DOMContentLoaded', function(){
-    Element.prototype.remove = function() {
-        this.parentElement.removeChild(this);
-    }
-    NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-        for(var i = this.length - 1; i >= 0; i--) {
-            if(this[i] && this[i].parentElement) {
-                this[i].parentElement.removeChild(this[i]);
-            }
-        }
-    }
 
-
-    document.getElementsByClassName("loading").remove();
-    document.getElementById("main").style.display='block';
 });

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/vk_webcam_updated/precache-manifest.1d7f5bde3a725e771a5919c53a82935f.js"
+  "/vk_webcam_updated/precache-manifest.e0a66d00001c99cc63cc85ee8bf33fe0.js"
 );
 
 workbox.clientsClaim();
