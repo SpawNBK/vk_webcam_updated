@@ -40,7 +40,7 @@ function PlayerjsAsync(CamName, ip, prevIP, title){
         case 'cam1':
             cam1 = new Playerjs({id:CamName,
                 file:ip,
-                title: "play",
+                title: "",
                 poster: prevIP
             });
             break;
@@ -48,28 +48,28 @@ function PlayerjsAsync(CamName, ip, prevIP, title){
         case 'cam2':
             cam2 = new Playerjs({id:CamName,
                 file:ip,
-                title: "play",
+                title: "",
                 poster: prevIP
             });
             break;
         case 'cam3':
             cam3 = new Playerjs({id:CamName,
                 file:ip,
-                title: "play",
+                title: "",
                 poster: prevIP
             });
             break;
         case 'cam4':
             cam4 = new Playerjs({id:CamName,
                 file:ip,
-                title: "play",
+                title: "",
                 poster: prevIP
             });
             break;
         case 'cam5':
             cam5 = new Playerjs({id:CamName,
                 file:ip,
-                title: "play",
+                title: "",
                 poster: prevIP
             });
             break;
@@ -112,3 +112,20 @@ function PlayerjsEvents(event,id,info){
         paused = true;
     }
 }
+
+document.addEventListener('DOMContentLoaded', function(){
+    Element.prototype.remove = function() {
+        this.parentElement.removeChild(this);
+    }
+    NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+        for(var i = this.length - 1; i >= 0; i--) {
+            if(this[i] && this[i].parentElement) {
+                this[i].parentElement.removeChild(this[i]);
+            }
+        }
+    }
+
+
+    document.getElementsByClassName("loading").remove();
+    document.getElementById("main").style.display='block';
+});

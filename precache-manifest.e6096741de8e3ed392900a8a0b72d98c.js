@@ -4,23 +4,23 @@ self.__precacheManifest = [
     "url": "/vk_webcam_updated/static/js/runtime~main.ee0b29f1.js"
   },
   {
-    "revision": "af44f4c57a8dc27effa8",
-    "url": "/vk_webcam_updated/static/js/main.f796da96.chunk.js"
+    "revision": "f1a6ad88b0b5c0fa1bcd",
+    "url": "/vk_webcam_updated/static/js/main.490ae320.chunk.js"
   },
   {
     "revision": "ed39a2d8ea537bebd540",
     "url": "/vk_webcam_updated/static/js/2.ea335950.chunk.js"
   },
   {
-    "revision": "af44f4c57a8dc27effa8",
-    "url": "/vk_webcam_updated/static/css/main.ad0fa060.chunk.css"
+    "revision": "f1a6ad88b0b5c0fa1bcd",
+    "url": "/vk_webcam_updated/static/css/main.673aa965.chunk.css"
   },
   {
     "revision": "ed39a2d8ea537bebd540",
     "url": "/vk_webcam_updated/static/css/2.dd2e62d3.chunk.css"
   },
   {
-    "revision": "c95d78ac407bbf7136347e5946bd48f0",
+    "revision": "61026b4168444041296788b17d6ca4f9",
     "url": "/vk_webcam_updated/index.html"
   }
 ];
