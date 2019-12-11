@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+//document.addEventListener('DOMContentLoaded', function(){
     Element.prototype.remove = function() {
         this.parentElement.removeChild(this);
     };
@@ -83,14 +83,13 @@ function PlayerjsAsync(CamName, ip, prevIP, title){
                 title: "",
                 poster: prevIP
             });
-            document.getElementsByClassName("loading").remove();
-            document.getElementById("main").style.display='block';
             break;
 
     }
 }
 
 var paused = false;
+
 function PlayerjsEvents(event,id,info){
     if(event=="play"){
         if (paused) {
@@ -125,6 +124,9 @@ function PlayerjsEvents(event,id,info){
         paused = true;
     }
 }
-
-
+document.addEventListener('DOMContentLoaded', function(){
+    setTimeout(function(){
+        document.getElementById("main").style.display = 'block';
+        document.getElementsByClassName("loading").remove();
+    }, 2000);
 });
