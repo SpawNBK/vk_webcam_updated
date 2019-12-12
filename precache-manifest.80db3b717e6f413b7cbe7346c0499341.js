@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/vk_webcam_updated/static/css/2.dd2e62d3.chunk.css"
   },
   {
-    "revision": "7f45bf88d3d92dd6bf325a6325f59b4d",
+    "revision": "996a26145b7b75dfbab743f6bb1f7dbf",
     "url": "/vk_webcam_updated/index.html"
   }
 ];
